@@ -1,4 +1,4 @@
-# RARELY — Be More You
+# RARELY — LESS COMPARISON. MORE YOU. 
 
 > A calm, creative mobile space for mood-based moments, journaling, self-expression, routines, and positive community.
 
