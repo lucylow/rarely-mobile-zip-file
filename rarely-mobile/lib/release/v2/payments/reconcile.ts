@@ -1,0 +1,2 @@
+import { hasPremiumAccess, type EntitlementSnapshot } from './entitlements';
+export function reconcileAccess(local: EntitlementSnapshot | undefined, server: EntitlementSnapshot | undefined, now = Date.now()): EntitlementSnapshot | undefined { if (!local) return server; if (!server) return local; const localAccess = hasPremiumAccess(local, now); const serverAccess = hasPremiumAccess(server, now); if (localAccess === serverAccess) return server.fetchedAt >= local.fetchedAt ? server : local; return server; }

@@ -22,11 +22,15 @@
     "db:push": "drizzle-kit generate && drizzle-kit migrate",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "qr": "node scripts/generate_qr.mjs"
-    ,"ios:devbuild": "npx expo run:ios"
-    ,"ios:prebuild": "npx expo prebuild"
-    ,"release:check": "node scripts/validate-ios-release.mjs && node scripts/scan-risky-code.mjs"
-    ,"release:test": "vitest run tests/release"
+    "qr": "node scripts/generate_qr.mjs",
+    "ios:production:check": "node scripts/validate-store-submission.mjs && node scripts/validate-production-env.mjs && node scripts/scan-for-store-blockers.mjs",
+    "ios:release:report": "node scripts/generate-release-report.mjs",
+    "ios:build": "eas build --platform ios --profile production",
+    "ios:submit:testflight": "eas submit --platform ios --profile production",
+    "ios:devbuild": "npx expo run:ios",
+    "ios:prebuild": "npx expo prebuild",
+    "release:check": "node scripts/validate-ios-release.mjs && node scripts/scan-risky-code.mjs",
+    "release:test": "vitest run tests/release"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
@@ -44,7 +48,9 @@
     "dotenv": "^16.6.1",
     "drizzle-orm": "^0.44.7",
     "expo": "~54.0.37",
+    "expo-apple-authentication": "~8.0.8",
     "expo-audio": "~1.1.1",
+    "expo-apple-authentication": "~8.0.8",
     "expo-build-properties": "^1.0.10",
     "expo-clipboard": "~8.0.8",
     "expo-constants": "~18.0.14",

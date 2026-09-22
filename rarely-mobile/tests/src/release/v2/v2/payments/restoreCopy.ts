@@ -1,0 +1,1 @@
+export const RESTORE_COPY = { loading: 'Checking Apple purchases…', active: 'Your RARELY membership is active again.', none: 'No active membership was found.', error: 'Apple purchases could not be checked. Please try again.' } as const;

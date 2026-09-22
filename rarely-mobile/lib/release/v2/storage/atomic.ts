@@ -1,0 +1,3 @@
+export interface AtomicStore { read(key: string): Promise<string | null>; write(key: string, value: string): Promise<void>; remove(key: string): Promise<void>; }
+export async function atomicWrite(store: AtomicStore, key: string, value: string): Promise<void> { const temp = `${key}:pending`; await store.write(temp, value); const verified = await store.read(temp); if (verified !== value) throw new Error('storage-verify-failed'); await store.write(key, value); await store.remove(temp); }
+export async function atomicDelete(store: AtomicStore, key: string): Promise<void> { await store.remove(`${key}:pending`); await store.remove(key); }

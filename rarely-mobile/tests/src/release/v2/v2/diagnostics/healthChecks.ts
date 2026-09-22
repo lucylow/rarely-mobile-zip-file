@@ -1,0 +1,1 @@
+export function dependencyHealth(name: string, fn: () => Promise<void>) { return { id: name, async run() { try { await fn(); return { ok: true, detail: 'ok' }; } catch (error) { return { ok: false, detail: error instanceof Error ? error.message.slice(0, 200) : 'failed' }; } } }; }

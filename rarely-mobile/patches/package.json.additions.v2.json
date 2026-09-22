@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "expo-apple-authentication": "~8.0.8",
+    "react-native-purchases": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.73.0"
+  },
+  "scripts": {
+    "ios:production:check": "node scripts/validate-store-submission.mjs && node scripts/validate-production-env.mjs && node scripts/scan-for-store-blockers.mjs",
+    "ios:release:report": "node scripts/generate-release-report.mjs",
+    "ios:build": "eas build --platform ios --profile production",
+    "ios:submit:testflight": "eas submit --platform ios --profile production"
+  }
+}

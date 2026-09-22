@@ -1,0 +1,2 @@
+export interface CustomerMapping { appUserId: string; billingUserId: string; createdAt: number; updatedAt: number; }
+export function validateMapping(mapping: CustomerMapping): string[] { const errors: string[] = []; if (!mapping.appUserId) errors.push('app-user-missing'); if (!mapping.billingUserId) errors.push('billing-user-missing'); if (mapping.updatedAt < mapping.createdAt) errors.push('timestamps-invalid'); return errors; }

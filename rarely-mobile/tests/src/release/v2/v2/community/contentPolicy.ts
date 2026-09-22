@@ -1,0 +1,2 @@
+export interface ContentPolicyResult { allowed: boolean; reason?: string; }
+export function validateCommunityText(text: string): ContentPolicyResult { const normalized = text.trim(); if (!normalized) return { allowed: false, reason: 'empty' }; if (normalized.length > 4_000) return { allowed: false, reason: 'too-long' }; if (/https?:\/\/[^\s]+/i.test(normalized) && /giveaway|free money|crypto/i.test(normalized)) return { allowed: false, reason: 'spam-pattern' }; return { allowed: true }; }

@@ -1,0 +1,19 @@
+{
+  "bundleIdentifier": "com.app.rarelymobile",
+  "products": [
+    {
+      "id": "rarely.premium.monthly",
+      "type": "auto-renewable-subscription",
+      "displayName": "RARELY Premium Monthly",
+      "billingPeriod": "P1M",
+      "entitlement": "rarely_premium"
+    },
+    {
+      "id": "rarely.premium.annual",
+      "type": "auto-renewable-subscription",
+      "displayName": "RARELY Premium Annual",
+      "billingPeriod": "P1Y",
+      "entitlement": "rarely_premium"
+    }
+  ]
+}

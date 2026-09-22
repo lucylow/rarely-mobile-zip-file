@@ -1,0 +1,1 @@
+export function isOutputSafe(text: string): boolean { if (!text.trim()) return false; if (text.length > 8_000) return false; if (/password\s*[:=]|api[_ -]?key\s*[:=]/i.test(text)) return false; return true; }

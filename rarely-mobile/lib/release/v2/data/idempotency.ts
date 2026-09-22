@@ -1,0 +1,2 @@
+export interface IdempotencyRecord<T> { key: string; result: T; createdAt: number; expiresAt: number; }
+export class IdempotencyMap<T> { private map = new Map<string, IdempotencyRecord<T>>(); get(key: string, now = Date.now()): T | undefined { const value = this.map.get(key); if (!value || value.expiresAt <= now) { this.map.delete(key); return undefined; } return value.result; } put(key: string, result: T, ttlMs = 10 * 60_000, now = Date.now()): void { this.map.set(key, { key, result, createdAt: now, expiresAt: now + ttlMs }); } }

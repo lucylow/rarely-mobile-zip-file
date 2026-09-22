@@ -1,0 +1,3 @@
+export type AnalyticsEventName = 'app_opened' | 'moment_started' | 'moment_completed' | 'journal_saved' | 'routine_completed' | 'membership_viewed' | 'purchase_started' | 'purchase_completed' | 'purchase_failed' | 'permission_requested' | 'error_seen';
+export interface AnalyticsEvent { name: AnalyticsEventName; at: number; sessionId: string; properties: Record<string, string | number | boolean | null>; }
+export function makeEvent(name: AnalyticsEventName, sessionId: string, properties: Record<string, string | number | boolean | null> = {}): AnalyticsEvent { return { name, at: Date.now(), sessionId, properties }; }

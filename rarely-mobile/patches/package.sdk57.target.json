@@ -1,0 +1,14 @@
+{
+  "target": {
+    "expo": "^57.0.0",
+    "react": "19.2.3",
+    "react-native": "0.86.0",
+    "react-native-web": "0.21.0"
+  },
+  "migration": [
+    "Upgrade SDK 54 -> 55 -> 56 -> 57, one major version at a time.",
+    "Run npx expo install --fix and npx expo-doctor after each step.",
+    "Regenerate native projects if using Continuous Native Generation.",
+    "Run real-device iOS purchase and Sign in with Apple tests after the final prebuild."
+  ]
+}

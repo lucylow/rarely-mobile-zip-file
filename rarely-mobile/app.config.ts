@@ -49,9 +49,13 @@ const config: ExpoConfig = {
   newArchEnabled: true,
   ios: {
     supportsTablet: true,
+    usesAppleSignIn: true,
     bundleIdentifier: env.iosBundleId,
     "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleAllowMixedLocalizations": true,
+        "NSPhotoLibraryUsageDescription": "RARELY uses photo access only when you choose to add images to creative moments or your scrapbook.",
+        "NSMicrophoneUsageDescription": "RARELY uses the microphone only when you choose to record an audio creative moment."
       }
   },
   android: {
@@ -86,6 +90,7 @@ const config: ExpoConfig = {
   },
   plugins: [
     "expo-router",
+    "expo-apple-authentication",
     "expo-font",
     "expo-web-browser",
     [

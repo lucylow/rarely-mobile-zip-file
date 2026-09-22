@@ -1,0 +1,1 @@
+export const AUTH_COPY = { signIn: 'Continue', canceled: 'No problem — nothing was changed.', failed: 'We could not finish signing you in. Please try again.', signedOut: 'You are signed out.' } as const;

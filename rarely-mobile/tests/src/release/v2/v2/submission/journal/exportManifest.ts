@@ -1,0 +1,3 @@
+export type ExportItem = { id: string; kind: 'journal'|'mood'|'moment'|'routine'; bytes: number; encrypted: boolean };
+export type ExportManifest = { createdAt: number; userId: string; items: ExportItem[]; formatVersion: 1 };
+export function validateManifest(manifest: ExportManifest): string[] { const errors: string[] = []; if (!manifest.userId) errors.push('user-id'); if (manifest.formatVersion !== 1) errors.push('format'); for (const item of manifest.items) { if (!item.id) errors.push('item-id'); if (item.bytes < 0) errors.push(`bytes:${item.id}`); if (item.kind === 'journal' && !item.encrypted) errors.push(`journal-not-encrypted:${item.id}`); } return errors; }

@@ -1,0 +1,2 @@
+export interface StoreText { name: string; subtitle: string; description: string; keywords: string; }
+export function textWarnings(text: StoreText): string[] { const warnings: string[] = []; if (text.name.length > 30) warnings.push('name-over-common-limit'); if (text.subtitle.length > 30) warnings.push('subtitle-over-common-limit'); if (text.keywords.split(',').map((s) => s.trim()).filter(Boolean).length > 20) warnings.push('many-keywords'); if (/guaranteed|cure|diagnose|best app/i.test(text.description)) warnings.push('claims-review'); return warnings; }

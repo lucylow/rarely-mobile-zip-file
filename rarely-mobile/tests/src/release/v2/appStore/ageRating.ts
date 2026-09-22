@@ -1,0 +1,3 @@
+export type ContentFlag = 'userGeneratedContent' | 'messaging' | 'aiGeneratedContent' | 'matureThemes' | 'healthReference';
+export interface AgeRatingInput { flags: Partial<Record<ContentFlag, boolean>>; maxUserInput: number; }
+export function calculateReviewFlags(input: AgeRatingInput): string[] { const out: string[] = []; if (input.flags.userGeneratedContent) out.push('user-generated-content'); if (input.flags.messaging) out.push('messaging-or-community'); if (input.flags.aiGeneratedContent) out.push('ai-generated-content'); if (input.maxUserInput > 0) out.push('open-ended-user-input'); return out; }

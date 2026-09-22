@@ -1,0 +1,1 @@
+export class PurchaseLock { private held = false; acquire(): boolean { if (this.held) return false; this.held = true; return true; } release(): void { this.held = false; } isHeld(): boolean { return this.held; } }

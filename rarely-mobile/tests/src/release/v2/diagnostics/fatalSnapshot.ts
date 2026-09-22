@@ -1,0 +1,3 @@
+import { redactObject } from '../security/redaction';
+export interface FatalSnapshot { at: number; route: string; errorName: string; message: string; breadcrumbs: unknown[]; safeContext?: Record<string, unknown>; }
+export function createFatalSnapshot(input: Omit<FatalSnapshot, 'at' | 'safeContext'> & { context?: Record<string, unknown> }): FatalSnapshot { return { at: Date.now(), route: input.route, errorName: input.errorName, message: input.message.slice(0, 500), breadcrumbs: input.breadcrumbs.slice(-50), safeContext: input.context ? redactObject(input.context) as Record<string, unknown> : undefined }; }

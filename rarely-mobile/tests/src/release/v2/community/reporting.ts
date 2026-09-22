@@ -1,0 +1,2 @@
+export interface UserReport { id: string; targetId: string; reporterId: string; reason: string; createdAt: number; }
+export function normalizeReport(reason: string, targetId: string, reporterId: string): UserReport { return { id: `report:${targetId}:${reporterId}:${Date.now()}`, targetId: targetId.slice(0, 128), reporterId: reporterId.slice(0, 128), reason: reason.slice(0, 80), createdAt: Date.now() }; }

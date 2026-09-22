@@ -1,0 +1,2 @@
+const FORBIDDEN = /email|phone|address|journal|body|prompt|token|password/i;
+export function redactAnalyticsProperties(properties: Record<string, string | number | boolean | null>): Record<string, string | number | boolean | null> { const out: Record<string, string | number | boolean | null> = {}; for (const [key, value] of Object.entries(properties)) { if (FORBIDDEN.test(key)) out[key] = '[REDACTED]'; else if (typeof value === 'string') out[key] = value.slice(0, 100); else out[key] = value; } return out; }

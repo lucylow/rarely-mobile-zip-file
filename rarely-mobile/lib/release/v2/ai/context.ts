@@ -1,0 +1,2 @@
+export interface AiContext { mood?: string; interestTags: string[]; recentActivityKinds: string[]; userInstruction: string; }
+export function minimizeAiContext(input: AiContext): AiContext { return { mood: input.mood?.slice(0, 40), interestTags: [...new Set(input.interestTags.map((tag) => tag.slice(0, 40)))].slice(0, 8), recentActivityKinds: [...new Set(input.recentActivityKinds)].slice(0, 6), userInstruction: input.userInstruction.slice(0, 2_000) }; }

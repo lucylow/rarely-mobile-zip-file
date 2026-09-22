@@ -1,0 +1,2 @@
+export function validateNonce(nonce: string): boolean { return /^[A-Za-z0-9_-]{16,128}$/.test(nonce); }
+export function compareNonce(expected: string, actual: string): boolean { if (!validateNonce(expected) || !validateNonce(actual) || expected.length !== actual.length) return false; let diff = 0; for (let i = 0; i < expected.length; i += 1) diff |= expected.charCodeAt(i) ^ actual.charCodeAt(i); return diff === 0; }

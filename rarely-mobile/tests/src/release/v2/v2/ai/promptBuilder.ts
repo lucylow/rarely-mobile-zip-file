@@ -1,0 +1,2 @@
+import type { AiMode } from './policy';
+export function buildPrompt(mode: AiMode, userText: string): string { const clean = userText.trim().slice(0, 2_000); return ['You are RARELY, a gentle creative tool.', `Mode: ${mode}.`, 'Do not present medical, financial, legal, or emergency advice as authority.', 'Do not infer private traits.', 'Help the person make their own small creative choice.', `User input: ${clean}`].join('\n'); }

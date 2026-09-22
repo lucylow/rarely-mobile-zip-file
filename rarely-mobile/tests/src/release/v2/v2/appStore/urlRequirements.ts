@@ -1,0 +1,1 @@
+export function validatePublicUrl(label: string, value: string): string | undefined { try { const url = new URL(value); if (url.protocol !== 'https:') return `${label} must use HTTPS`; if (url.username || url.password) return `${label} cannot contain credentials`; return undefined; } catch { return `${label} is not a valid URL`; } }

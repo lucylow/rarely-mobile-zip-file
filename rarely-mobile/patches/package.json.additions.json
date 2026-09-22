@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "ios:devbuild": "npx expo run:ios",
+    "ios:prebuild": "npx expo prebuild",
+    "release:check": "node scripts/validate-ios-release.mjs && node scripts/scan-risky-code.mjs",
+    "release:test": "vitest run tests/release"
+  },
+  "dependencies": {
+    "react-native-purchases": "INSTALL_WITH_EXPO_INSTALL",
+    "react-native-purchases-ui": "INSTALL_WITH_EXPO_INSTALL"
+  }
+}

@@ -1,0 +1,3 @@
+export type ConflictResolution = 'local' | 'remote' | 'merge' | 'manual';
+export interface VersionedRecord { id: string; updatedAt: number; version: number; deletedAt?: number; }
+export function resolveConflict(local: VersionedRecord, remote: VersionedRecord): ConflictResolution { if (local.deletedAt && remote.updatedAt <= local.updatedAt) return 'local'; if (remote.deletedAt && local.updatedAt <= remote.updatedAt) return 'remote'; if (local.version === remote.version && local.updatedAt === remote.updatedAt) return 'merge'; if (local.updatedAt > remote.updatedAt) return 'local'; if (remote.updatedAt > local.updatedAt) return 'remote'; return 'manual'; }

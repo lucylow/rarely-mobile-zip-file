@@ -1,0 +1,2 @@
+export interface ConflictEvent { id: string; recordId: string; localVersion: number; remoteVersion: number; resolution: string; createdAt: number; }
+export class ConflictLog { private readonly events: ConflictEvent[] = []; add(event: ConflictEvent): void { this.events.push(event); } list(): ConflictEvent[] { return this.events.slice().sort((a, b) => b.createdAt - a.createdAt); } count(): number { return this.events.length; } }
