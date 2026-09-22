@@ -1,0 +1,382 @@
+{
+  "name": "rarely-enhancement-pack",
+  "purpose": "Additive functionality upgrade for RARELY",
+  "generated": "2026-09-22",
+  "sourceFiles": 72,
+  "sourceLines": 8538,
+  "nonEmptySourceLines": 7720,
+  "pageEstimateAt50NonEmptyLines": 155,
+  "verification": {
+    "domainAndTestsStrictTypeScript": "passed",
+    "uiStrictTypeScript": "passed",
+    "serverAndDrizzleSyntaxTranspile": "passed",
+    "vitestExecution": "not run (Vitest executable not available in the build environment)"
+  },
+  "notes": [
+    "Counts include TypeScript/TSX/SQL source and deterministic test code.",
+    "The pack is an additive implementation set based on the supplied Devpost material and reviewed public repository seams; it is not an already-merged checkout.",
+    "Server synchronization uses the server autoincrement row id as the authoritative pull cursor to avoid device-clock ordering gaps."
+  ],
+  "files": [
+    {
+      "path": "app/insights.tsx",
+      "lines": 24,
+      "nonEmptyLines": 22
+    },
+    {
+      "path": "app/memories.tsx",
+      "lines": 29,
+      "nonEmptyLines": 26
+    },
+    {
+      "path": "app/sync-center.tsx",
+      "lines": 31,
+      "nonEmptyLines": 29
+    },
+    {
+      "path": "app/upgrade-hub.tsx",
+      "lines": 71,
+      "nonEmptyLines": 63
+    },
+    {
+      "path": "components/upgrade/DailyBriefCard.tsx",
+      "lines": 44,
+      "nonEmptyLines": 41
+    },
+    {
+      "path": "components/upgrade/EmptyState.tsx",
+      "lines": 13,
+      "nonEmptyLines": 11
+    },
+    {
+      "path": "components/upgrade/FeatureGate.tsx",
+      "lines": 17,
+      "nonEmptyLines": 16
+    },
+    {
+      "path": "components/upgrade/InsightCard.tsx",
+      "lines": 43,
+      "nonEmptyLines": 39
+    },
+    {
+      "path": "components/upgrade/MemoryCard.tsx",
+      "lines": 49,
+      "nonEmptyLines": 46
+    },
+    {
+      "path": "components/upgrade/MemorySection.tsx",
+      "lines": 16,
+      "nonEmptyLines": 14
+    },
+    {
+      "path": "components/upgrade/SyncStatusChip.tsx",
+      "lines": 21,
+      "nonEmptyLines": 19
+    },
+    {
+      "path": "drizzle/enhancement-schema.ts",
+      "lines": 23,
+      "nonEmptyLines": 22
+    },
+    {
+      "path": "lib/ux/upgrade/activityRecorder.ts",
+      "lines": 31,
+      "nonEmptyLines": 28
+    },
+    {
+      "path": "lib/ux/upgrade/aiCompanion.ts",
+      "lines": 111,
+      "nonEmptyLines": 98
+    },
+    {
+      "path": "lib/ux/upgrade/aiHistory.ts",
+      "lines": 53,
+      "nonEmptyLines": 43
+    },
+    {
+      "path": "lib/ux/upgrade/analyticsExtra.ts",
+      "lines": 47,
+      "nonEmptyLines": 41
+    },
+    {
+      "path": "lib/ux/upgrade/analyticsModel.ts",
+      "lines": 80,
+      "nonEmptyLines": 71
+    },
+    {
+      "path": "lib/ux/upgrade/backfill.ts",
+      "lines": 55,
+      "nonEmptyLines": 50
+    },
+    {
+      "path": "lib/ux/upgrade/backup.ts",
+      "lines": 68,
+      "nonEmptyLines": 60
+    },
+    {
+      "path": "lib/ux/upgrade/circleChallenges.ts",
+      "lines": 65,
+      "nonEmptyLines": 59
+    },
+    {
+      "path": "lib/ux/upgrade/dailyBrief.ts",
+      "lines": 107,
+      "nonEmptyLines": 101
+    },
+    {
+      "path": "lib/ux/upgrade/eventStore.ts",
+      "lines": 201,
+      "nonEmptyLines": 182
+    },
+    {
+      "path": "lib/ux/upgrade/expoNotifications.ts",
+      "lines": 18,
+      "nonEmptyLines": 16
+    },
+    {
+      "path": "lib/ux/upgrade/expoStorage.ts",
+      "lines": 15,
+      "nonEmptyLines": 13
+    },
+    {
+      "path": "lib/ux/upgrade/export.ts",
+      "lines": 28,
+      "nonEmptyLines": 25
+    },
+    {
+      "path": "lib/ux/upgrade/featureFlags.ts",
+      "lines": 48,
+      "nonEmptyLines": 39
+    },
+    {
+      "path": "lib/ux/upgrade/ids.ts",
+      "lines": 89,
+      "nonEmptyLines": 74
+    },
+    {
+      "path": "lib/ux/upgrade/index.ts",
+      "lines": 39,
+      "nonEmptyLines": 39
+    },
+    {
+      "path": "lib/ux/upgrade/insights.ts",
+      "lines": 174,
+      "nonEmptyLines": 159
+    },
+    {
+      "path": "lib/ux/upgrade/membership.ts",
+      "lines": 82,
+      "nonEmptyLines": 66
+    },
+    {
+      "path": "lib/ux/upgrade/memory.ts",
+      "lines": 177,
+      "nonEmptyLines": 156
+    },
+    {
+      "path": "lib/ux/upgrade/memoryEditor.ts",
+      "lines": 35,
+      "nonEmptyLines": 32
+    },
+    {
+      "path": "lib/ux/upgrade/memorySignals.ts",
+      "lines": 157,
+      "nonEmptyLines": 146
+    },
+    {
+      "path": "lib/ux/upgrade/moderation.ts",
+      "lines": 47,
+      "nonEmptyLines": 41
+    },
+    {
+      "path": "lib/ux/upgrade/notificationState.ts",
+      "lines": 49,
+      "nonEmptyLines": 39
+    },
+    {
+      "path": "lib/ux/upgrade/notifications.ts",
+      "lines": 106,
+      "nonEmptyLines": 94
+    },
+    {
+      "path": "lib/ux/upgrade/onboarding.ts",
+      "lines": 47,
+      "nonEmptyLines": 41
+    },
+    {
+      "path": "lib/ux/upgrade/personalizedMoments.ts",
+      "lines": 38,
+      "nonEmptyLines": 33
+    },
+    {
+      "path": "lib/ux/upgrade/preferencesStore.ts",
+      "lines": 94,
+      "nonEmptyLines": 81
+    },
+    {
+      "path": "lib/ux/upgrade/privacyCenter.ts",
+      "lines": 96,
+      "nonEmptyLines": 84
+    },
+    {
+      "path": "lib/ux/upgrade/privacyLog.ts",
+      "lines": 22,
+      "nonEmptyLines": 18
+    },
+    {
+      "path": "lib/ux/upgrade/recommendationBridge.ts",
+      "lines": 58,
+      "nonEmptyLines": 54
+    },
+    {
+      "path": "lib/ux/upgrade/routerGuards.ts",
+      "lines": 25,
+      "nonEmptyLines": 22
+    },
+    {
+      "path": "lib/ux/upgrade/routineEngine.ts",
+      "lines": 66,
+      "nonEmptyLines": 62
+    },
+    {
+      "path": "lib/ux/upgrade/scrapbookSearch.ts",
+      "lines": 109,
+      "nonEmptyLines": 97
+    },
+    {
+      "path": "lib/ux/upgrade/securitySession.ts",
+      "lines": 50,
+      "nonEmptyLines": 40
+    },
+    {
+      "path": "lib/ux/upgrade/session.ts",
+      "lines": 36,
+      "nonEmptyLines": 31
+    },
+    {
+      "path": "lib/ux/upgrade/storage.ts",
+      "lines": 87,
+      "nonEmptyLines": 80
+    },
+    {
+      "path": "lib/ux/upgrade/sync.ts",
+      "lines": 134,
+      "nonEmptyLines": 119
+    },
+    {
+      "path": "lib/ux/upgrade/telemetry.ts",
+      "lines": 41,
+      "nonEmptyLines": 33
+    },
+    {
+      "path": "lib/ux/upgrade/types.ts",
+      "lines": 237,
+      "nonEmptyLines": 214
+    },
+    {
+      "path": "lib/ux/upgrade/upgradeService.ts",
+      "lines": 37,
+      "nonEmptyLines": 34
+    },
+    {
+      "path": "migrations/0001_rarely_enhancements.sql",
+      "lines": 17,
+      "nonEmptyLines": 17
+    },
+    {
+      "path": "server/enhancementIndex.ts",
+      "lines": 6,
+      "nonEmptyLines": 5
+    },
+    {
+      "path": "server/enhancementRouter.ts",
+      "lines": 114,
+      "nonEmptyLines": 104
+    },
+    {
+      "path": "server/enhancementTransport.ts",
+      "lines": 16,
+      "nonEmptyLines": 14
+    },
+    {
+      "path": "tests/compile-stubs.d.ts",
+      "lines": 20,
+      "nonEmptyLines": 20
+    },
+    {
+      "path": "tests/eventContract1.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract2.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract3.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract4.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract5.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract6.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract7.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/eventContract8.test.ts",
+      "lines": 365,
+      "nonEmptyLines": 334
+    },
+    {
+      "path": "tests/fixtures.ts",
+      "lines": 25,
+      "nonEmptyLines": 23
+    },
+    {
+      "path": "tests/personalizedMoments1.test.ts",
+      "lines": 447,
+      "nonEmptyLines": 406
+    },
+    {
+      "path": "tests/personalizedMoments2.test.ts",
+      "lines": 447,
+      "nonEmptyLines": 406
+    },
+    {
+      "path": "tests/personalizedMoments3.test.ts",
+      "lines": 447,
+      "nonEmptyLines": 406
+    },
+    {
+      "path": "tests/personalizedMoments4.test.ts",
+      "lines": 447,
+      "nonEmptyLines": 406
+    },
+    {
+      "path": "tests/syncQueue.test.ts",
+      "lines": 150,
+      "nonEmptyLines": 136
+    },
+    {
+      "path": "tests/ui-compile-stubs.d.ts",
+      "lines": 42,
+      "nonEmptyLines": 42
+    }
+  ]
+}

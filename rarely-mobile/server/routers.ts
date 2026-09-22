@@ -3,6 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { invokeLLM } from "./_core/llm";
+import { upgradeRouter } from "./enhancementIndex";
 import { z } from "zod";
 
 export const creativeResultSchema = z.object({
@@ -67,6 +68,7 @@ export const appRouter = router({
         }
       }),
   }),
+  upgrade: upgradeRouter,
   auth: router({
     me: publicProcedure.query((opts) => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
