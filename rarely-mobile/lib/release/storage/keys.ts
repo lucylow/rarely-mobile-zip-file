@@ -1,0 +1,1 @@
+export const RELEASE_STORAGE_KEYS = { entitlement: "rarely.release.entitlement", consent: "rarely.release.consent", diagnostics: "rarely.release.diagnostics", mockMode: "rarely.release.mockMode" } as const;

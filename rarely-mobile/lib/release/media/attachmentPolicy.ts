@@ -1,0 +1,1 @@
+export function canAttachMedia(input: { sizeBytes: number; mime?: string }): boolean { return input.sizeBytes > 0 && input.sizeBytes <= 12_000_000 && (!!input.mime ? /^image\//.test(input.mime) : true); }

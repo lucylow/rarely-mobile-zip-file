@@ -1,0 +1,1 @@
+export function repeatFixture<T>(seed: T, count: number, map: (seed: T, index: number) => T): T[] { return Array.from({ length: Math.max(0, Math.min(count, 1000)) }, (_, index) => map(seed, index)); }

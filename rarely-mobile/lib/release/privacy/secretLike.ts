@@ -1,0 +1,1 @@
+const PATTERNS = [/sk-[A-Za-z0-9_-]{16,}/i, /Bearer\s+[A-Za-z0-9._-]{16,}/i, /AKIA[0-9A-Z]{12,}/]; export function looksSecretLike(value: string): boolean { return PATTERNS.some((pattern) => pattern.test(value)); }

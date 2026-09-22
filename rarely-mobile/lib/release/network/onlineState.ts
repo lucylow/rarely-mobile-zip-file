@@ -1,0 +1,1 @@
+export type OnlineState = "unknown" | "online" | "offline"; export function normalizeOnlineState(value: boolean | null | undefined): OnlineState { return value == null ? "unknown" : value ? "online" : "offline"; }

@@ -1,0 +1,1 @@
+export function webhookLogRecord(input: { eventId: string; type: string; userId: string }): Record<string,string> { return { eventId: input.eventId, type: input.type, userId: input.userId.slice(0,120) }; }

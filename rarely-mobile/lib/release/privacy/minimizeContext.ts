@@ -1,0 +1,1 @@
+export function minimizeAiContext(input: { mood?: string; interests?: string[]; prompt: string }): { mood?: string; interests: string[]; prompt: string } { return { mood: input.mood?.slice(0, 30), interests: (input.interests ?? []).slice(0, 5).map((x) => x.slice(0, 40)), prompt: input.prompt.trim().slice(0, 500) }; }

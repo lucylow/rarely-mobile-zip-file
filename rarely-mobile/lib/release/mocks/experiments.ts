@@ -1,0 +1,1 @@
+export const MOCK_EXPERIMENTS = Array.from({ length: 24 }, (_, index) => ({ id: `exp-${String(index+1).padStart(2,"0")}`, key: `release_${index+1}`, variants: ["control","variantA"], enabled: index%3 !== 0 }));

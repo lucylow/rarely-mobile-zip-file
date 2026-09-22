@@ -1,0 +1,1 @@
+export type DeleteJobStatus = "queued" | "running" | "complete" | "failed"; export function nextDeleteStatus(status: DeleteJobStatus, success: boolean): DeleteJobStatus { if (status === "queued") return "running"; if (status === "running") return success ? "complete" : "failed"; return status; }

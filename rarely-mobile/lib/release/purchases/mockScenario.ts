@@ -1,0 +1,1 @@
+export type MockPurchaseScenario = "happy" | "cancel" | "pending" | "failure" | "offline"; export function isRetryableScenario(value: MockPurchaseScenario): boolean { return value === "pending" || value === "failure" || value === "offline"; }

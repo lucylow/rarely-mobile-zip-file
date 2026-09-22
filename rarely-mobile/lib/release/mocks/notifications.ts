@@ -1,0 +1,1 @@
+export const MOCK_NOTIFICATION_PLANS = Array.from({ length: 48 }, (_, index) => ({ id: `notif-${String(index+1).padStart(3,"0")}`, hour: 8 + (index % 12), minute: (index * 5) % 60, reason: ["gentle check-in","ritual reminder","circle prompt","creative spark"][index%4], enabled: index%5 !== 0 }));

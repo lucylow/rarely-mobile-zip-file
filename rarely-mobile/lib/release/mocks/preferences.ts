@@ -1,0 +1,1 @@
+export const MOCK_PREFERENCES = Array.from({ length: 64 }, (_, index) => ({ id: `pref-${String(index+1).padStart(3,"0")}`, interest: ["creativity","journaling","music","beauty","reflection","community","routine"][index%7], weight: ((index%9)+1)/10, explicit: index%2===0 }));

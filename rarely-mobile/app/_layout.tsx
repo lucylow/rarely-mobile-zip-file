@@ -23,6 +23,7 @@ import { initManusRuntime, subscribeSafeAreaInsets } from "@/lib/_core/manus-run
 import { shouldShowOnboarding } from "@/lib/ux/onboardingMachine";
 import { AppErrorBoundary } from "@/components/app-error-boundary";
 import { reportNonFatalError } from "@/lib/non-fatal-error";
+import { HardenedStartup } from "@/components/release/HardenedStartup";
 
 const DEFAULT_WEB_INSETS: EdgeInsets = { top: 0, right: 0, bottom: 0, left: 0 };
 const DEFAULT_WEB_FRAME: Rect = { x: 0, y: 0, width: 0, height: 0 };
@@ -99,8 +100,9 @@ export default function RootLayout() {
   }, [initialInsets, initialFrame]);
 
   const content = (
-    <AppErrorBoundary>
-      <GestureHandlerRootView style={{ flex: 1 }}>
+    <HardenedStartup>
+      <AppErrorBoundary>
+        <GestureHandlerRootView style={{ flex: 1 }}>
       <trpc.Provider client={trpcClient} queryClient={queryClient}>
         <QueryClientProvider client={queryClient}>
           {/* Default to hiding native headers so raw route segments don't appear (e.g. "(tabs)", "products/[id]"). */}
@@ -110,13 +112,20 @@ export default function RootLayout() {
             <Stack.Screen name="(tabs)" />
             <Stack.Screen name="membership" />
             <Stack.Screen name="monetization-insights" />
+              <Stack.Screen name="release/paywall" />
+              <Stack.Screen name="release/membership-settings" />
+              <Stack.Screen name="release/privacy" />
+              <Stack.Screen name="release/deletion" />
+              <Stack.Screen name="release/diagnostics" />
+              <Stack.Screen name="release/mock-playground" />
             <Stack.Screen name="oauth/callback" />
           </Stack>
           <StatusBar style="auto" />
         </QueryClientProvider>
       </trpc.Provider>
-      </GestureHandlerRootView>
-    </AppErrorBoundary>
+        </GestureHandlerRootView>
+      </AppErrorBoundary>
+    </HardenedStartup>
   );
 
   const shouldOverrideSafeArea = Platform.OS === "web";

@@ -1,0 +1,1 @@
+export const MOCK_SYNC_EVENTS = Array.from({ length: 240 }, (_, index) => ({ id: `sync-${String(index+1).padStart(4,"0")}`, type: ["upsert","delete","feedback","preference"][index%4], createdAt: 1727000000000 + index*1000, deviceId: `device-${index%5+1}`, acked: index%7 !== 0 }));

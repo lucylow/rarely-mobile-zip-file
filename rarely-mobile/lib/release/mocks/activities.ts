@@ -1,0 +1,1 @@
+export const MOCK_ACTIVITIES = Array.from({ length: 220 }, (_, index) => ({ id: `activity-${String(index+1).padStart(3,"0")}`, type: ["moment-completed","journal-created","routine-completed","circle-joined","photo-saved"][index%5], title: `Activity ${index+1}`, createdAt: `2026-09-${String((index%22)+1).padStart(2,"0")}T${String(index%24).padStart(2,"0")}:30:00.000Z` }));

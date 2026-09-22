@@ -1,0 +1,1 @@
+export interface StaleValue<T> { value: T; updatedAt: number; } export function isFresh<T>(value: StaleValue<T>, maxAgeMs: number, now = Date.now()): boolean { return now - value.updatedAt <= maxAgeMs; }

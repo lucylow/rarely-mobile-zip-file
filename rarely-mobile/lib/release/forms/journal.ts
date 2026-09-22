@@ -1,0 +1,1 @@
+export function journalValidation(text: string): { ok: boolean; error?: string } { if (!text.trim()) return { ok: false, error: "Write something first." }; if (text.length > 8000) return { ok: false, error: "Your note is too long." }; return { ok: true }; }
