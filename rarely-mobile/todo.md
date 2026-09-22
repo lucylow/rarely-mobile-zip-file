@@ -1,0 +1,829 @@
+# Project TODO
+
+- [x] Review the provided RARELY product concept and feature direction
+- [x] Create the mobile interface design plan
+- [x] Generate a unique RARELY app icon and copy it to all required asset locations
+- [x] Update app.config.ts with the RARELY app name and logo metadata
+- [x] Update the theme palette for the RARELY brand
+- [x] Implement the Home tab with mood selection and Rare Moment content
+- [x] Implement the Create tab hub
+- [x] Implement the Community tab preview
+- [x] Implement the Rare Studio tab preview
+- [x] Implement the Profile tab preview
+- [x] Add working navigation and press feedback for primary interactions
+- [x] Run TypeScript, lint, and test checks
+- [x] Save the first complete project checkpoint
+- [x] Improve core interactions with a focused Rare Moment flow and local saved state
+- [x] Add more polished feedback and actionable empty states across tabs
+- [x] Add a local journal composer with saved entries
+- [x] Add a saved-journal view and empty state to the Create tab
+- [x] Add a saved journal library with edit and delete actions
+- [x] Add profile reflection summaries from saved moments and entries
+- [x] Make journal editing update the existing entry instead of creating duplicates
+- [x] Add a local weekly reflection summary using journal and Rare Moment activity
+- [x] Add local journal export through the native share sheet
+- [x] Add a clear local-data privacy and reset control
+- [x] Add a confirmed local-data reset flow for journal drafts, entries, and completed moments
+- [x] Replace deprecated shadow styling in the profile surfaces
+- [x] Review the new RARELY UX and React Native specification
+- [x] Implement the highest-value specification-driven improvements
+- [x] Add a first-run onboarding flow with skip and recovery states
+- [x] Add preference personalization and persist the selected starter path
+- [x] Wire mood selection to the specification’s intent-aware navigation behavior
+- [x] Add editable preferences accessible from Profile
+- [x] Personalize Home and Create surfaces from the saved starter path
+- [x] Add adaptive Home recommendation ranking from saved preferences and mood
+- [x] Add progressive disclosure for secondary Home actions
+- [x] Make the Home Rare Moment respond to the selected mood with recommendation rationale
+- [x] Add accessible copy that explains why a moment was suggested
+- [x] Add reduced-motion-safe visual feedback when changing moods
+- [x] Add accessible selected-state announcements for mood recommendations
+- [x] Add accessible labels and selected states to the tab navigation actions
+- [x] Add accessible semantics and confirmation feedback to journal library actions
+- [x] Add accessibility labels to Create, Studio, and Community action cards
+- [x] Add undo recovery after deleting a saved journal entry
+- [x] Complete the non-navigating Studio and Community action flows
+- [x] Add useful local interaction feedback for action completion
+- [x] Show joined Community circles in Profile
+- [x] Show completed Studio routines in Profile with useful empty states
+- [x] Make Profile activity highlights open their corresponding saved content
+- [x] Replace static Profile highlight counts with real local values
+- [x] Add a chronological local scrapbook activity view
+- [x] Connect the Profile scrapbook action and add a meaningful empty state
+- [x] Make scrapbook journal entries reopen their saved journal content
+- [x] Add local scrapbook filters for journals, moments, circles, and rituals
+- [x] Add edit and delete actions directly to scrapbook journal entries
+- [x] Add confirmation and undo recovery for scrapbook deletions
+- [x] Refresh scrapbook activity when returning from journal editing
+- [x] Add clear local feedback after journal edits and deletions
+- [x] Warn before leaving the journal with unsaved text
+- [x] Improve draft recovery and save-flow feedback
+- [x] Add an explicit Save draft action to the journal composer
+- [x] Add visible draft recovery status and clearer draft feedback
+- [x] Show saved journal drafts in the Create tab
+- [x] Add resume and discard actions for the visible draft
+- [x] Add draft timestamp metadata for the Create-tab draft card
+- [x] Add the original prompt to draft recovery context
+- [x] Show the saved draft timestamp inside the journal editor
+- [x] Add clearer resume context and accessible recovery status in the editor
+- [x] Add a reusable accessible local snackbar component
+- [x] Connect snackbar feedback to journal draft save, discard, and recovery actions
+- [x] Add undo recovery after discarding a local journal draft
+- [x] Add undo recovery after deleting a saved journal entry
+- [x] Keep recovery behavior consistent between journal library and scrapbook surfaces
+- [x] Add reversible leave behavior for joined Community circles
+- [x] Add reversible completion behavior for Rare Studio routines
+- [x] Keep Profile activity counts synchronized after reversals
+- [x] Add undo recovery after leaving a Community circle
+- [x] Add undo recovery after reversing a Studio routine completion
+- [x] Preserve synchronized local counts after undo recovery
+- [x] Persist join timestamps for Community circles with backward-compatible parsing
+- [x] Persist completion timestamps for Studio routines with backward-compatible parsing
+- [x] Surface Community and Studio activity timestamps in Profile and Scrapbook
+- [x] Persist completion timestamps for Rare Moments with backward-compatible parsing
+- [x] Surface Rare Moment completion dates in Profile and Scrapbook
+- [x] Persist readable names and labels for local activity records
+- [x] Surface named activity details in Scrapbook and Profile
+- [x] Add a local activity detail route for named moments, circles, and rituals
+- [x] Connect Scrapbook activity cards to the detail route
+- [x] Connect Profile activity highlights to useful detail context
+- [x] Add safe reverse actions to activity detail pages
+- [x] Keep reverse actions synchronized with Profile and Scrapbook records
+- [x] Provide accessible confirmation feedback after reversing an activity
+- [x] Add editable private notes to activity detail pages
+- [x] Persist activity notes locally with backward-compatible records
+- [x] Show accessible save feedback for activity notes
+- [x] Load private activity notes into Scrapbook summaries locally
+- [x] Render concise accessible note previews without exposing full note text
+- [x] Add full-note access from Scrapbook activity previews
+- [x] Add privacy-aware confirmation before revealing a full private note
+- [x] Add accessible semantics for full-note interactions
+- [x] Add a local preference to show or hide private activity-note previews
+- [x] Persist the note-preview privacy preference across sessions
+- [x] Apply the preference consistently in Scrapbook and related settings
+- [x] Add a quick privacy toggle directly to Scrapbook
+- [x] Persist inline privacy changes consistently with Preferences
+- [x] Add accessible confirmation feedback for the inline toggle
+- [x] Add a quick privacy toggle to activity detail pages
+- [x] Keep detail-page visibility synchronized with Scrapbook and Preferences
+- [x] Add accessible feedback when detail-page privacy visibility changes
+- [x] Add a reusable privacy status indicator for note-aware screens
+- [x] Show the indicator consistently in Scrapbook and activity detail
+- [x] Keep privacy status accessible and synchronized with the shared setting
+- [x] Add branded visual mood assets for core Rare Moments
+- [x] Integrate visual assets with accessible labels and reduced-motion-safe fallbacks
+- [x] Add richer visual treatment to Home and activity detail surfaces
+- [x] Add editorial scrapbook texture assets
+- [x] Add visual creative cards to the Create surface
+- [x] Keep new visuals accessible with meaningful labels and non-visual fallbacks
+- [x] Add editorial Community circle visual assets
+- [x] Add Rare Studio routine visual assets
+- [x] Integrate new visuals with accessible labels and non-visual fallbacks
+- [x] Add reflective Profile visual assets
+- [x] Add privacy-focused Preferences visual assets
+- [x] Integrate new visuals with accessible labels and non-visual fallbacks
+- [x] Add welcoming onboarding visual assets
+- [x] Add reflective journal composer visual assets
+- [x] Integrate new visuals with accessible labels and non-visual fallbacks
+- [x] Add visual treatment for activity-history records
+- [x] Add richer visual moment cards to Scrapbook
+- [x] Preserve accessible labels and non-visual activity fallbacks
+- [x] Add full-screen visual viewing for Scrapbook activity artwork
+- [x] Preserve activity context and privacy controls inside the viewer
+- [x] Add accessible close and visual-description semantics
+- [x] Add swipeable visual sequence navigation to Scrapbook
+- [x] Preserve activity title, date, and privacy context across visual slides
+- [x] Add accessible previous, next, and close controls
+- [x] Define distinct visual sequences for moments, circles, and rituals
+- [x] Map existing editorial assets to each activity kind
+- [x] Preserve accessible slide descriptions and local privacy context
+- [x] Define mood-specific visual sequences for Rare Moments
+- [x] Map existing editorial assets to creative, calm, energized, and reflective moods
+- [x] Preserve accessible mood labels and local privacy context
+- [x] Add multi-slide visual storytelling to Rare Moment screens
+- [x] Add mood-specific slide navigation and progress context
+- [x] Preserve accessible mood descriptions and text-first fallbacks
+- [x] Add optional local image attachments to journal entries and activity notes
+- [x] Display user-selected journal imagery in private Scrapbook and detail views
+- [x] Preserve local-only privacy and accessible image fallback behavior
+- [x] Add richer activity-specific visual sequences to Scrapbook
+- [x] Add layered visual treatment to private activity detail pages
+- [x] Preserve accessible descriptions and non-visual fallbacks for new visuals
+- [x] Add a richer local personalization profile from preferences and recent activity
+- [x] Improve Home recommendations with personalized rationale and recency signals
+- [x] Personalize Create and Rare Moment suggestions without exposing private text
+- [x] Preserve local-only privacy and accessible personalization controls
+- [x] Add a transparent reset-personalization control
+- [x] Add time-aware local recommendation copy
+- [x] Personalize Community and Rare Studio recommendations from the shared profile
+- [x] Preserve transparent, local-only personalization behavior
+- [x] Add visible recommendation explanations to Community and Rare Studio
+- [x] Add a local personalization signal history view
+- [x] Add user-controlled quiet hours for time-aware prompts
+- [x] Preserve accessible, local-only personalization transparency
+- [x] Add private “This fits” recommendation feedback
+- [x] Add reversible “Not for me” feedback to recommendation surfaces
+- [x] Use feedback signals to adjust local recommendation ordering
+- [x] Add accessible, local-only, reversible feedback behavior
+- [x] Improve a high-value React Native flow from the attached baseline
+- [x] Validate the improved mobile code and preserve existing behavior
+- [x] Decay stale recommendation feedback so ranking stays adaptable over time
+- [x] Reuse a shared feedback-selection helper across Home, Create, Community, and Studio
+- [x] Add tests for recent-vs-count feedback selection behavior
+- [x] Remove fragile alias usage from local storage helpers to keep tests portable
+- [x] Improve a high-value React Native reliability or UX flow
+- [x] Validate the next mobile code improvement and preserve existing behavior
+- [x] Add resilient Home feedback persistence with clear save/error confirmations
+- [x] Add resilient Create and Scrapbook persistence with rollback-safe local feedback
+- [x] Add guarded Preferences load/save/reset flows with user-facing failure alerts
+- [x] Add guarded Onboarding skip/finish persistence with duplicate-submit protection
+- [x] Improve another high-value mobile flow
+- [x] Validate the next React Native improvement and preserve existing behavior
+- [x] Improve another high-value mobile flow
+- [x] Validate the next React Native improvement and preserve existing behavior
+- [x] Guard Circle and Routine completion flows against haptic capability failures
+- [x] Normalize route parameters on activity screens to prevent invalid IDs from deep links
+- [x] Guard activity-detail note saves and reverse actions when target records are missing
+- [x] Prevent scrapbook undo state from being created with missing journal entries
+- [x] Centralize route-param normalization in shared UX guards
+- [x] Add unit coverage for normalized param helpers
+- [x] Add robust AsyncStorage failure handling across activity, moment, circle, and routine flows
+- [x] Extract shared async guard helpers and add unit coverage for guard behavior
+- [x] Refactor activity detail flow to reuse shared guard utilities and reduce duplicated async handling
+- [x] Refactor Create and Scrapbook flows to use shared async guard helpers consistently
+- [x] Improve another high-value mobile user flow
+- [x] Validate the next React Native improvement and preserve existing behavior
+- [x] Relocate remaining route-unrelated UX utilities outside app/ux
+- [x] Validate the route cleanup and preserve existing behavior
+- [x] Improve another high-value mobile flow
+- [x] Validate the next React Native improvement and preserve existing behavior
+- [x] Apply the attached visual UI/UX audit guidance to a focused RARELY surface
+- [x] Use shared semantic tokens and preserve accessible interaction states
+- [x] Improve another high-value mobile surface or interaction
+- [x] Validate the refinement and preserve existing behavior
+- [x] Capture visual evidence and validate the visual refinement
+- [x] Improve another high-value mobile visual or interaction flow
+- [x] Validate the refinement and preserve existing behavior
+- [x] Improve another high-value mobile user flow
+- [x] Validate the next React Native refinement and preserve existing behavior
+- [x] Improve AI-assisted creative prompts with local mood and preference context
+- [x] Add clear AI privacy disclosure and user-controlled input scope
+- [x] Add resilient AI-unavailable fallback behavior and validation coverage
+- [x] Review attached monetization requirements against current premium flows
+- [x] Complete privacy-safe AI prompt improvements and monetization alignment
+- [x] Validate AI and monetization behavior with deterministic coverage
+- [x] Improve AI-assisted creativity with structured output and user-selectable creative modes
+- [x] Add privacy-safe AI fallback and clearer generation feedback
+- [x] Add deterministic tests for AI modes, output constraints, and privacy boundaries
+- [x] Add local AI response feedback and refinement controls
+- [x] Add deterministic fallback prompts when AI generation is unavailable
+- [x] Test AI feedback persistence, fallback behavior, and privacy boundaries
+- [x] Add local feedback for AI prompts and persist the preferred AI mode
+- [x] Add a private, capped prompt history with safe replay behavior
+- [x] Add deterministic tests for AI feedback, persistence, and privacy isolation
+- [x] Add a private AI prompt history screen with replay and delete controls
+- [x] Add an independent clear-AI-history privacy action
+- [x] Add deterministic tests for AI history deletion, clearing, and safe replay
+- [x] Add local favorite toggles for AI prompts
+- [x] Add undo recovery after deleting an AI prompt
+- [x] Test favorite persistence, deletion recovery, and privacy isolation
+- [x] Add favorites-only filtering to AI prompt history
+- [x] Add a Create-screen shortcut to favorite AI prompts
+- [x] Add undo recovery after clearing AI history
+- [x] Add local search across saved AI prompts
+- [x] Show favorite prompt count in the Create shortcut
+- [x] Add a confirmation-protected clear-favorites action
+- [x] Add deterministic tests for search and selective clearing privacy isolation
+- [x] Re-verify the latest local AI search and favorite-management refinement after the repeated improvement request
+- [x] Add local AI mode filters for Spark, Reflect, and Play
+- [x] Add undo recovery after clearing favorite AI prompts
+- [x] Add deterministic tests for mode filtering and favorite recovery privacy isolation
+- [x] Continue improving the RARELY codebase with a focused reliability or maintainability refinement
+- [x] Validate the refinement with TypeScript, lint, and deterministic tests
+- [x] Remove remaining deprecated styling and interaction props without changing behavior
+- [x] Validate the cleanup with TypeScript, lint, and deterministic tests
+- [x] Remove remaining runtime deprecation warnings without changing behavior
+- [x] Validate the warning cleanup with TypeScript, lint, and deterministic tests
+- [x] Continue improving the RARELY codebase with a focused, low-risk quality refinement
+- [x] Validate the refinement with TypeScript, lint, and deterministic tests
+- [x] Continue improving the RARELY codebase with a focused maintainability refinement
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Continue improving the RARELY codebase with a focused quality refinement
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Continue improving the RARELY codebase with focused asset-workflow reliability coverage
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Continue improving the RARELY codebase with focused validation resilience
+- [x] Add negative coverage for invalid or missing generated assets
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Review the advanced monetization prompt against current RARELY monetization flows
+- [x] Identify privacy-safe, non-coercive monetization refinements that are concrete and implementable
+- [x] Validate any monetization alignment changes with the consolidated project validation command
+- [x] Continue improving the RARELY codebase with a focused monetization or validation refinement
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Harden persisted monetization timestamp validation without changing valid membership behavior
+- [x] Validate the timestamp refinement with the consolidated project validation command
+- [x] Make repeated local membership activation and trial-start operations idempotent
+- [x] Add deterministic coverage for duplicate membership actions and valid plan changes
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Reject invalid or negative persisted monetization analytics counters
+- [x] Add deterministic coverage for analytics counter normalization
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Validate persisted monetization experiment assignment and action timestamps
+- [x] Add deterministic coverage for invalid experiment timestamps
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Cap direct upgrade-prompt impression writes at the configured maximum
+- [x] Add deterministic coverage for repeated prompt recording at the cap
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Normalize blank and whitespace-only monetization analytics sources
+- [x] Add deterministic coverage for source normalization and bucket isolation
+- [x] Validate the refinement with the consolidated project validation command
+- [x] Audit and fix current runtime or validation errors
+- [x] Add targeted non-fatal error handling without exposing private data
+- [x] Add deterministic regression tests for the repaired failure paths
+- [x] Run the consolidated validation command and checkpoint the fixes
+- [x] Make prompt-state normalization writes best-effort
+- [x] Add deterministic coverage for valid prompt reads when recovery writes fail
+- [x] Validate the error-handling refinement and checkpoint the fixes
+- [x] Make optional monetization analytics writes non-fatal
+- [x] Add deterministic coverage for analytics write failures
+- [x] Validate the error-handling refinement and checkpoint the fixes
+- [x] Guard root onboarding storage reads against failures
+- [x] Audit and harden remaining user-facing async persistence and native capability paths
+- [x] Add deterministic coverage for the new failure paths
+- [x] Validate the reliability pass and checkpoint the fixes
+- [x] Harden journal save and draft-clear rollback behavior
+- [x] Add safe fallback feedback for image-picker failures
+- [x] Add deterministic tests for journal and picker failure paths
+- [x] Validate and checkpoint the reliability improvements
+- [x] Harden local journal export and native share failure feedback
+- [x] Harden local-data reset rollback and partial-failure handling
+- [x] Add deterministic tests for share and reset failure paths
+- [x] Validate and checkpoint the reliability improvements
+- [x] Add explicit native share/export capability guards
+- [x] Harden asynchronous reset failure feedback
+- [x] Add deterministic tests for share/export and reset guard behavior
+- [x] Validate and checkpoint the reliability improvements
+- [ ] Review the attached competitive UVP document against the current RARELY experience
+- [ ] Identify the highest-value differentiation gaps and aligned improvements
+- [ ] Implement the selected competitive UVP improvements
+- [ ] Validate the improvements and checkpoint the work
+- [x] Review the attached functionality and mock-data reduction document
+- [x] Audit the current app for misleading placeholders and redundant mock content
+- [x] Replace misleading mock states with honest local or empty states
+- [x] Validate and checkpoint the mock-data reduction improvements
+- [x] Audit the current React Native data and UI contracts for further improvement
+- [x] Implement the next focused canonical-data or mock-reduction improvement
+- [x] Add deterministic regression coverage for the improvement
+- [x] Validate and checkpoint this React Native improvement pass
+- [x] Audit remaining duplicated local activity reads and async UI states
+- [x] Route remaining activity screens through shared local-data contracts
+- [x] Add transparent degraded-state and retry feedback
+- [x] Validate and checkpoint this React Native improvement pass
+- [x] Compare the attached AI codebook with the current AI implementation
+- [x] Add stable AI request/result and safety contracts
+- [x] Integrate bounded privacy-safe AI behavior with rollback support
+- [x] Add deterministic AI safety and failure-path tests
+- [x] Validate and checkpoint the AI improvements
+- [x] Audit AI prompt and feature-control duplication
+- [x] Add a versioned local AI prompt registry with rollback controls
+- [x] Integrate governed prompts into the Create AI flow
+- [x] Add deterministic tests and validate the prompt-governance improvements
+- [x] Audit runtime configuration and fallback state surfaces
+- [x] Make AI prompt governance environment-aware
+- [x] Integrate explicit AI fallback state into the mobile UI
+- [x] Add deterministic tests and validate the changes
+- [x] Audit AI fallback and accessibility surfaces
+- [x] Add explicit user-visible AI fallback state presentation
+- [x] Add accessibility and recovery regression coverage
+- [x] Validate and checkpoint the React Native improvements
+- [x] Audit prompt-governance transparency and interaction states
+- [x] Add a compact AI governance disclosure surface
+- [x] Add deterministic UI and governance coverage
+- [x] Validate and checkpoint the React Native improvements
+- [x] Audit local activity availability and Home state handling
+- [x] Add explicit local activity snapshot availability metadata
+- [x] Integrate recoverable degraded-state feedback in Home
+- [x] Add deterministic tests and validate the changes
+- [x] Audit activity availability handling across Profile, Community, and Studio
+- [x] Add shared availability messaging and recovery guidance to secondary screens
+- [x] Add deterministic coverage for secondary-screen availability states
+- [x] Validate and checkpoint the React Native improvements
+- [x] Audit draft and attachment persistence states
+- [x] Add explicit draft and attachment availability metadata
+- [x] Integrate recoverable UI feedback and safe fallbacks
+- [x] Add deterministic tests and validate the changes
+- [x] Audit restored media and journal export data paths
+- [x] Add safe media-reference and journal-entry load validation
+- [x] Integrate resilient UI and export preparation feedback
+- [x] Add deterministic regression coverage and validate
+- [x] Audit media-reference and export preparation paths
+- [x] Add safe media and export preparation helpers
+- [x] Integrate resilient journal UI and sharing feedback
+- [x] Add deterministic tests and validate the changes
+- [x] Audit private media reference handling
+- [x] Add safe media-reference validation helpers
+- [x] Integrate attachment recovery-safe rendering
+- [x] Add deterministic tests and validate
+- [x] Audit attachment recovery and visibility states
+- [x] Add explicit attachment validation results
+- [x] Integrate visible recovery-safe attachment UI
+- [x] Add deterministic tests and validate
+- [x] Audit local image existence and skipped-metadata flows
+- [x] Add file-aware attachment validation and cleanup
+- [x] Integrate safe attachment recovery UI
+- [x] Add deterministic tests and validate
+- [x] Audit current motion and reduced-motion support
+- [x] Add reusable accessible motion primitives
+- [x] Integrate purposeful motion into high-value app surfaces
+- [x] Add deterministic motion behavior tests and verify the UI
+- [x] Validate and checkpoint the animated experience
+- [x] Audit Home interaction state transitions
+- [x] Add reusable animated state transitions
+- [x] Integrate motion into mood and expandable content interactions
+- [x] Add deterministic coverage and validate the animated states
+- [x] Checkpoint the dynamic interaction improvements
+- [x] Audit motion opportunities in Create, Journal, and Profile
+- [x] Add reusable animated feedback primitives
+- [x] Integrate motion into secondary app flows
+- [x] Add deterministic coverage and validate the animated flows
+- [x] Checkpoint the dynamic secondary-flow improvements
+- [ ] Audit Journal feedback and refresh states
+- [ ] Add reusable feedback animation primitive
+- [ ] Integrate motion into Journal interaction states
+- [ ] Add deterministic coverage and validate the animated flow
+- [ ] Checkpoint the Journal motion improvements
+- [x] Audit the existing onboarding flow and requirements
+- [x] Design clearer onboarding progression and personalization guidance
+- [x] Implement onboarding experience refinements
+- [x] Add onboarding regression coverage and validate behavior
+- [x] Checkpoint the onboarding improvements
+- [x] Audit existing motion and interaction feedback
+- [x] Define the next motion improvements
+- [x] Implement dynamic interaction animations
+- [x] Add regression coverage and run validation
+- [x] Checkpoint the dynamic animation improvements
+- [x] Audit current runtime errors and async failure paths
+- [x] Define explicit mock-data fallback boundaries and disclosure copy
+- [x] Implement guarded error handling and privacy-safe mock fallbacks
+- [x] Add deterministic regression coverage and run validation
+- [x] Checkpoint the reliability improvements
+- [x] Audit current AI suite, Create flow, and privacy boundaries
+- [x] Define vision board, manifestation, and moodboard data models
+- [x] Implement the AI creative workspace and local fallback flows
+- [x] Add deterministic coverage and validate privacy and persistence
+- [x] Checkpoint the new AI creative workspace
+- [x] Audit the existing Creative Lab and local persistence
+- [x] Design editable creative-board state and visual tile model
+- [x] Implement richer AI creative board interactions
+- [x] Add deterministic coverage and validate local privacy behavior
+- [x] Checkpoint the expanded AI Creative Lab
+- [x] Audit Creative Lab storage and image capabilities
+- [x] Define safe local image-tile data and URI policy
+- [x] Implement private image tiles in Creative Lab
+- [x] Add deterministic coverage and validate image privacy
+- [x] Checkpoint the private visual-board improvements
+- [x] Audit existing Creative Lab and image-generation capabilities
+- [x] Define visual concept-card privacy and fallback behavior
+- [x] Implement generated visual concept cards in Creative Lab
+- [x] Add deterministic coverage and validate privacy-safe generation
+- [x] Checkpoint the generated visual-card experience
+- [x] Audit Creative Lab state and persistence limits
+- [x] Design bounded local board-history behavior
+- [x] Implement board history and regeneration controls
+- [x] Add deterministic coverage and validate local privacy
+- [x] Checkpoint the board-history improvements
+- [x] Audit saved-board state and current history controls
+- [x] Define local rename and delete behavior
+- [x] Implement saved-board management interactions
+- [x] Add deterministic coverage and validate persistence recovery
+- [x] Checkpoint the saved-board management improvements
+- [x] Audit saved-board history and AI input boundaries
+- [x] Define comparison and synthesis behavior
+- [x] Implement local board comparison and AI synthesis
+- [x] Add deterministic coverage and validate privacy-safe synthesis
+- [x] Checkpoint the board comparison experience
+- [x] Audit board comparison state and synthesis persistence
+- [x] Define local comparison-preview and synthesis-history models
+- [x] Implement preview cards and local synthesis history
+- [x] Add deterministic coverage and validate persistence behavior
+- [x] Checkpoint the comparison-history improvements
+- [x] Audit saved-board and synthesis metadata
+- [x] Define local filtering and favorite behavior
+- [x] Implement filters and favorites in Creative Lab
+- [x] Add deterministic coverage and validate local metadata persistence
+- [x] Checkpoint the saved-content organization improvements
+- [x] Audit Creative Lab history and navigation
+- [x] Design the saved-board library information architecture
+- [x] Implement the local saved-board library screen
+- [x] Add deterministic coverage and validate library behavior
+- [x] Checkpoint the saved-board library
+- [x] Audit Creative Library and synthesis storage
+- [x] Define local library sections and synthesis presentation
+- [x] Implement synthesis history in Creative Library
+- [x] Add deterministic coverage and validate local library behavior
+- [x] Checkpoint the integrated creative library
+- [x] Audit current logs, source errors, and fallback boundaries
+- [x] Define robust fallback and error-state behavior
+- [x] Implement error handling and mock-data fallbacks
+- [x] Add regression coverage and run full validation
+- [x] Checkpoint the reliability and fallback fixes
+- [x] Audit Community, Studio, and shared recovery paths
+- [x] Define retry and fallback UX behavior
+- [x] Implement recovery controls and mock data fallbacks
+- [x] Add deterministic regression coverage and run validation
+- [x] Checkpoint the recovery and fallback improvements
+- [x] Audit latest runtime output and remaining failure states
+- [x] Define empty-state and mock-content boundaries
+- [x] Implement shared fallback content and recovery handling
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the final fallback hardening
+- [x] Audit latest app-source errors and async paths
+- [x] Define remaining fallback and retry boundaries
+- [x] Implement remaining error handling and mock states
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the latest reliability fixes
+- [x] Audit latest runtime output and remaining app-source failures
+- [x] Define safe fallback, retry, and data-preservation rules
+- [x] Implement remaining error handling and mock states
+- [x] Add deterministic regression coverage and run full validation
+- [x] Checkpoint the reliability pass
+- [x] Audit latest runtime output and remaining async failure paths
+- [x] Define safe mock fallback and retry behavior
+- [x] Implement remaining error handling and fallback states
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the reliability improvements
+- [x] Audit latest runtime output and app-source failure paths
+- [x] Define fallback and data-preservation behavior
+- [x] Implement error handling and mock fallback states
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the reliability pass
+- [x] Audit latest runtime output and remaining async failures
+- [x] Define fallback and data-preservation rules
+- [x] Implement remaining error handling and mock fallback states
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the reliability improvements
+- [x] Audit latest runtime output and app-source failure paths
+- [x] Define fallback and data-preservation behavior
+- [x] Implement remaining error handling and mock fallback states
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the reliability improvements
+- [x] Audit latest runtime output and remaining async paths
+- [x] Define safe fallback and data-preservation rules
+- [x] Implement remaining error handling and mock fallback states
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the reliability improvements
+- [x] Audit loading, error, and storage state surfaces
+- [x] Define accessible loading and diagnostics behavior
+- [x] Implement loading states, diagnostics, and retry actions
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the functionality improvements
+- [x] Audit current diagnostics and Creative Lab feedback paths
+- [x] Define malformed-data, retry, and feedback states
+- [x] Implement diagnostics and animated recovery feedback
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the functionality improvements
+- [x] Audit diagnostics, persistence, and feedback helpers
+- [x] Define non-destructive repair and feedback behavior
+- [x] Implement repair, diagnostics coverage, and animated feedback
+- [x] Validate persistence safety and regression behavior
+- [x] Checkpoint the functionality improvements
+- [x] Audit Storage Health and Creative Library action paths
+- [x] Define safe repair confirmation and backup behavior
+- [x] Implement repair safety and library feedback improvements
+- [x] Add deterministic coverage and run full validation
+- [x] Checkpoint the functionality improvements
+
+- [x] Audit Profile persistence and reset interactions
+- [x] Define safe preference feedback and reset confirmation behavior
+- [x] Implement persistence hardening and calm animated feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the next recoverable checkpoint
+
+- [x] Audit Profile reset and Preferences persistence paths
+- [x] Define duplicate-action and partial-failure behavior
+- [x] Implement guarded persistence and accessible progress feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current error paths and fallback coverage
+- [x] Define safe fallback and disclosure behavior
+- [x] Implement error handling and mock-data recovery states
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit local activity and AI recovery paths
+- [x] Define fallback data boundaries and recovery states
+- [x] Implement contained errors, retries, and mock fallbacks
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit Creative Lab generation and persistence paths
+- [x] Define AI fallback and privacy disclosure behavior
+- [x] Implement contained generation errors, retries, and fallback results
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit remaining local activity and AI persistence paths
+- [x] Define fallback data and partial-failure behavior
+- [x] Implement contained errors and disclosed mock recovery
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit remaining local activity, journal, and AI history recovery paths
+- [x] Define fallback content and recovery disclosure behavior
+- [x] Implement contained errors and disclosed mock recovery states
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit journal and local-library restoration paths
+- [x] Define fallback content and failure disclosure behavior
+- [x] Implement contained errors and disclosed mock recovery states
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current recovery panels, loading states, and journal storage diagnostics
+- [x] Define shared recovery component and scoped journal repair behavior
+- [x] Implement recovery component, transitions, and confirmed repair flow
+- [x] Add regression tests and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit AI generation, synthesis, and persistence UX
+- [x] Define AI quality and privacy-preserving recovery behavior
+- [x] Implement AI state clarity, retry safety, and synthesis improvements
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current AI result, synthesis, and persistence UX
+- [x] Define grounded AI output and privacy disclosure improvements
+- [x] Implement synthesis quality, provenance, and recovery feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit generated-result persistence and retry state paths
+- [x] Define Save Again behavior and AI provenance disclosure
+- [x] Implement retryable local persistence and feedback states
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit synthesis and visual persistence paths
+- [x] Define safe local recovery and provenance behavior
+- [x] Implement Save Again paths and retry feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit saved visual restoration and AI payload validation
+- [x] Define safe restoration and recovery disclosure behavior
+- [x] Implement validated visual restoration and actionable recovery
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit visual lifecycle and local reference handling
+- [x] Define safe visual replacement and removal behavior
+- [x] Implement visual lifecycle controls and cleanup feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit AI visual and synthesis history management
+- [x] Define local history validation and management behavior
+- [x] Implement validated restore and local history controls
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit synthesis restoration and provenance rendering
+- [x] Define validated history and provenance behavior
+- [x] Implement synthesis validation and provenance feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit AI-history parsing and storage helpers
+- [x] Define scoped repair and confirmation behavior
+- [x] Implement malformed-record repair and recovery feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit AI-history repair and backup visibility
+- [x] Define non-destructive backup and repair disclosure
+- [x] Implement backup visibility and stronger repair feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit AI-history repair preview and current recovery UI
+- [x] Define privacy-safe backup preview and confirmation behavior
+- [x] Implement non-destructive preview and repair feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit AI-history export and local metadata boundaries
+- [x] Define export format and privacy-safe disclosure
+- [x] Implement user-initiated AI metadata export and feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current build and runtime error signals
+- [x] Define fixes and contained recovery behavior
+- [x] Implement fixes and user-visible recovery states
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current build, runtime, and interaction error signals
+- [x] Define the highest-impact fix and recovery behavior
+- [x] Implement the fix and contained user feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current project error signals
+- [x] Identify and define the highest-impact fix
+- [x] Implement the fix and contained recovery feedback
+- [x] Run full validation and review runtime health
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current app-owned build and runtime errors
+- [x] Define the highest-impact correction and recovery behavior
+- [x] Implement the correction and contained feedback
+- [x] Run regression checks and full validation
+- [x] Save and report the recoverable checkpoint
+
+- [ ] Audit current app-owned build and runtime errors
+- [ ] Define the highest-impact correction and recovery behavior
+- [ ] Implement the correction and contained feedback
+- [ ] Run regression checks and full validation
+- [ ] Save and report the recoverable checkpoint
+
+- [ ] Audit current data and AI failure surfaces
+- [ ] Design safe fallback and feedback behavior
+- [ ] Implement error handling and mock feedback
+- [ ] Add focused regression coverage and validate
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current data and AI failure surfaces
+- [x] Design safe fallback and feedback behavior
+- [x] Implement error handling and mock feedback
+- [x] Add focused regression coverage and validate
+- [x] Save and report the recoverable checkpoint
+
+- [x] Map codebook recommendations to the existing RARELY architecture
+- [x] Select a focused implementation slice with privacy and monetization safeguards
+- [x] Implement AI contracts, fallback feedback, and targeted safeguards
+- [x] Add focused tests and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current data and AI failure surfaces
+- [x] Select the highest-impact safe correction
+- [x] Implement error handling and mock feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current data and AI failure surfaces
+- [x] Select the highest-impact safe correction
+- [x] Implement error handling and mock feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current data and AI failure surfaces
+- [x] Select the highest-impact safe correction
+- [x] Implement error handling and mock feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current data and AI failure surfaces
+- [x] Select the highest-impact safe correction
+- [x] Implement error handling and mock feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Audit current data and AI failure surfaces
+- [x] Select the highest-impact safe correction
+- [x] Implement error handling and mock feedback
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Map the existing app and sponsor pack architecture
+- [x] Choose the smallest compatible integration slice
+- [x] Implement sponsor adapters, mock-first orchestration, and native UI
+- [x] Add regression coverage and run full validation
+- [x] Save and report the recoverable checkpoint
+
+- [x] Inspect preview and development-server health
+- [x] Apply the smallest safe preview fix
+- [x] Verify preview availability and report status
+
+- [ ] Inspect preview errors and button handlers
+- [ ] Apply the smallest interaction and preview fix
+- [ ] Verify buttons and preview health
+
+- [x] Inventory and classify archive differences
+- [x] Select unique safe features to port
+- [x] Merge selected features into the canonical app
+- [x] Run regression validation and fix integration issues
+- [x] Save and deliver the newest final RARELY version
+
+- [ ] Inspect preview, timeout, and button failures
+- [ ] Apply the smallest root-cause fix
+- [ ] Verify preview and primary button flows
+
+
+## Manus preview import
+
+- [x] Import repaired RARELY Expo source into the managed mobile project
+- [x] Preserve the existing RARELY screens, local-first data, assets, and package lockfile
+- [x] Ensure the repaired sponsor demo hook is available in the imported project
+- [x] Ensure OAuth and render-boundary hardening are present in the imported project
+- [x] Run the managed Manus mobile preview and verify the app entry and tab shell
+- [x] Verify Sponsor Studio renders without a fatal preview error
+- [x] Save one preview-ready checkpoint after validation
+
+
+## Preview error-handling repair
+
+- [x] Inspect the reported preview errors and current dev-server logs
+- [x] Add focused defensive handling for the affected preview flows
+- [x] Validate the repaired preview and save a new checkpoint
+
+
+## Timeout repair
+
+- [ ] Inspect Creative Lab, tRPC, LLM, and image-generation timeout paths
+- [ ] Apply the timeout and preview-fallback repairs from TIMEOUT_FIX_REPORT
+- [ ] Validate the repaired preview and save a checkpoint
